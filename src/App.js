@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import Home from './pages/Home';
-import BeerDetails from './pages/BeerDetails';
-import Error from './pages/Error';
+import Home from './pages/Home/Home';
+import BeerDetails from './pages/BeerDetails/BeerDetails';
+import Error from './pages/Error/Error';
 
 function App() {
     return (
