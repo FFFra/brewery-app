@@ -1,11 +1,11 @@
 import React from 'react';
 
-const loading = () => {
+const Loading = () => {
     return (
         <div>
-            <p>Hellow from loading</p>
+            <h1>Loading </h1>
         </div>
     );
 };
 
-export default loading;
+export default Loading;

@@ -3,7 +3,6 @@ import {Route, Switch} from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Error from './pages/Error/Error';
-import BeerForm from './components/Beerform/Beerform';
 import BeerDetails from './pages/BeerDetails/BeerDetails';
 
 function App() {

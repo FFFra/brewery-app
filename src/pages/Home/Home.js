@@ -1,9 +1,8 @@
 import React, {useContext, useState} from 'react';
-import {Link} from 'react-router-dom';
 
 import {BeerContext} from '../../context';
 import Loading from '../../components/Loading/Loading';
-import BeerForm from '../../components/Beerform/Beerform';
+import BeerForm from '../../components/BeerForm/BeerForm';
 import Bottle from '../../components/Bottle/Bottle';
 import Title from '../../components/Title/Title';
 
