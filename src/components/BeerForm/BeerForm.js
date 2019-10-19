@@ -1,15 +1,59 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {BeerContext} from '../../context';
 
 const BeerForm = () => {
-    const [value, setValue] = useState('');
-    const onChange = event => setValue(event.target.value);
-    // localStorage.setItem('myValueInLocalStorage', event.target.value);
+    let {addData, generateSlug} = useContext(BeerContext);
+
+    const [bottles, setBottle] = useState({
+        name: '',
+        beerStyle: '',
+        ibu: '',
+        abv: '',
+        description: '',
+        status: '',
+        slug: ''
+    });
+
+    const onChange = event => {
+        const {name, value} = event.target;
+        setBottle(prev => ({
+            ...prev,
+            [name]: value,
+            slug: generateSlug(prev.name)
+        }));
+    };
 
     return (
         <div>
-            <h1>Add a beer</h1>
-            <input value={value} type='text' onChange={onChange} />
-            <p>{value}</p>
+            <form action=''>
+                <h1>Add a beer</h1>
+                <div>
+                    <label htmlFor='name'>Name: </label>
+                    <input name='name' type='text' onChange={onChange} />
+                </div>
+                <div>
+                    <label htmlFor='style'>Style: </label>
+                    <input name='beerStyle' type='text' onChange={onChange} />
+                </div>
+                <div>
+                    <label htmlFor='ibu'>IBU: </label>
+                    <input name='ibu' type='text' onChange={onChange} />
+                </div>
+                <div>
+                    <label htmlFor='abv'>ABV: </label>
+                    <input name='abv' type='text' onChange={onChange} />
+                </div>
+
+                <div>
+                    <label htmlFor='description'>Description: </label>
+                    <input name='description' type='text' onChange={onChange} />
+                </div>
+                <select name='status' onChange={onChange}>
+                    <option value='verified'>Verified</option>
+                    <option value='unverified'>Unverified</option>
+                </select>
+            </form>
+            <button onClick={() => addData(bottles)}>Insert</button>
         </div>
     );
 };

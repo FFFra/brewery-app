@@ -27,6 +27,12 @@ class BeerProvider extends Component {
         return bottle;
     };
 
+    addData = value => {
+        let currentData = [value, ...this.state.bottles];
+        this.setState({bottles: currentData});
+        console.log(this.state.bottles);
+    };
+
     formatData(data) {
         let tempData = data.map(item => {
             let tempStyle = item.style;
@@ -59,7 +65,12 @@ class BeerProvider extends Component {
     render() {
         return (
             <BeerContext.Provider
-                value={{...this.state, getBottleDetail: this.getBottleDetail}}>
+                value={{
+                    ...this.state,
+                    getBottleDetail: this.getBottleDetail,
+                    addData: this.addData,
+                    generateSlug: this.generateSlug
+                }}>
                 {this.props.children}
             </BeerContext.Provider>
         );
