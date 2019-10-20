@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.form__title {
+    color: azure;
+}
+.form__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.form__label {
+    text-align: left;
+    color: azure;
+}
+.form__input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8a8a8a;
+}
