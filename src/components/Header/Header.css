@@ -1,0 +1,20 @@
+.banner__hero {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('../../assets/header.jpg');
+    background-position: center;
+}
+
+.banner__title {
+    height: 5vh;
+    min-width: 300px;
+    padding: 40px;
+    color: white;
+    font-size: 3vw;
+    background-color: rgba(99, 99, 99, 0.8);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 5vh;
+}
