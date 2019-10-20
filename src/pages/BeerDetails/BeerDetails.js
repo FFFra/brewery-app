@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Loading from 'react-spinners/ClipLoader';
 
 import {BeerContext} from '../../context';
 import './BeerDetails.css';
@@ -15,13 +16,16 @@ export default class BeerDetails extends Component {
     render() {
         const {getBottleDetail} = this.context;
         const bottle = getBottleDetail(this.state.slug);
-        console.log(bottle);
 
         if (!bottle) {
             return (
-                <div>
+                <div className='loading__container'>
                     <h3>Hold on, we are looking for your beer...</h3>
-                    <Link to='/'>Back</Link>
+
+                    <Loading sizeUnit={'px'} size={120} color={'#f5a91'} />
+                    <Link className='button' to='/'>
+                        Back
+                    </Link>
                 </div>
             );
         }
@@ -38,6 +42,9 @@ export default class BeerDetails extends Component {
                 <p>
                     <strong>abv:</strong> {abv}
                 </p>
+                <Link className='button' to='/'>
+                    Back
+                </Link>
             </div>
         );
     }
