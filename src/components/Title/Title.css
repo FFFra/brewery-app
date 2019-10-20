@@ -1,0 +1,13 @@
+.title__container {
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.title__text {
+    width: 70vw;
+    color: #f1c761;
+    background-color: rgba(34, 35, 37, 1);
+    padding: 30px 50px;
+    border-radius: 50px;
+}
