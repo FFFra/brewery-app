@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const breweryID = 'HaPdSL';
+
 const api = axios.create({
-    baseURL: `https://sandbox-api.brewerydb.com/v2/brewery/HaPdSL/beers/?key=${process.env.REACT_APP_BREWERYDB_API}`,
+    baseURL: `https://sandbox-api.brewerydb.com/v2/brewery/${breweryID}/beers/?key=${process.env.REACT_APP_BREWERYDB_API}`,
     responseType: 'json'
 });
 
