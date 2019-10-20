@@ -1,10 +1,13 @@
 .bottle__card {
-    flex: 0 1 calc(25% - 1em);
-    background: #fff;
+    /* flex: 0 1 calc(25% - 1em); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #3c3a3a;
     border-radius: 2px;
-    display: inline-block;
     height: 300px;
     margin: 1rem;
+    padding: 10px;
     position: relative;
     width: 300px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -14,4 +17,7 @@
 .bottle__card:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     transform: scale(1.05);
+}
+.bottle__title {
+    color: #f1c761;
 }

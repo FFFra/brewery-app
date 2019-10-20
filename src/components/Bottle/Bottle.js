@@ -9,14 +9,20 @@ const Bottle = ({item}) => {
 
     return (
         <article className='bottle__card'>
-            <h1>{name}</h1>
+            <h1 className={'bottle__title'}>{name}</h1>
             <h4>{status}</h4>
-            <p>style: {beerStyle}</p>
-            <span>ibu: {ibu} </span>
-            <span>abv: {abv} </span>
+            <p>
+                <strong>style:</strong> {beerStyle}
+            </p>
+            <span>
+                <strong>ibu:</strong> {ibu}{' '}
+            </span>
+            <span>
+                <strong>abv:</strong> {abv}{' '}
+            </span>
             <div>
                 <Link to={`/details/${slug}`}>
-                    <button>Show details</button>
+                    <button className={'button'}>Show details</button>
                 </Link>
             </div>
         </article>
