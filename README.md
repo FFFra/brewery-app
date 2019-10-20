@@ -6,6 +6,8 @@ This app renders the beer cellar of a certain brewery. In this particular case, 
 
 This app does not have an API, so it makes usage of fake data. To achieve that, I took advantage of the [BreweryDB](https://brewerydb.com) sandbox. The main reason for that is the great amount of data provided by the API, so we don't have to generate our own.
 
+To access the data you must generate a free API key at [BreweryDB](https://brewerydb.com) and include it at `src/services/api.js` or a `.env` file.
+
 You can pick another brewery to be rendered by changing the ID in the API request at:
 
 ```
@@ -45,7 +47,7 @@ You will also see any lint errors in the console.
 | Features       |                                           Description                                           |
 | -------------- | :---------------------------------------------------------------------------------------------: |
 | Axios          |                      Promise based HTTP client for the browser and node.js                      |
-| CORS support   |                  via [cors-anywhere](https://github.com/Rob--W/cors-anywhere)                   |
+| CORS support   |                  Via [cors-anywhere](https://github.com/Rob--W/cors-anywhere)                   |
 | react-spinners | A collection of loading [spinners](https://www.npmjs.com/package/react-spinners) with React.js. |
 | React-Router   |          Declarative [routing](https://www.npmjs.com/package/react-router) for React.           |
 
@@ -63,7 +65,7 @@ src/context.js
 
 ### React Hooks
 
-According to Sophie Alpert at React Conf 2008:
+According to [Sophie Alpert](https://github.com/sophiebits) at React Conf 2008:
 
 > Sophie Alpert said at React Conf 2018 Class are very confusing and annoying to understand for both > Human and Machine
 
