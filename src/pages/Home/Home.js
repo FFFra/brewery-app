@@ -1,5 +1,4 @@
 import React, {useContext, useState} from 'react';
-import {css} from '@emotion/core';
 
 import './Home.css';
 import {BeerContext} from '../../context';
