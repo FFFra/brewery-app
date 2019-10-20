@@ -40,9 +40,18 @@ You will also see any lint errors in the console.
 
 ---
 
+## Overview
+
+| Features       |                                           Description                                           |
+| -------------- | :---------------------------------------------------------------------------------------------: |
+| Axios          |                      Promise based HTTP client for the browser and node.js                      |
+| CORS support   |                  via [cors-anywhere](https://github.com/Rob--W/cors-anywhere)                   |
+| react-spinners | A collection of loading [spinners](https://www.npmjs.com/package/react-spinners) with React.js. |
+| React-Router   |          Declarative [routing](https://www.npmjs.com/package/react-router) for React.           |
+
 ## Considerations
 
-# Context API
+### Context API
 
 The Context API provides a very straight forward way to pass data through the component tree without having to pass props down manually at every level.
 
@@ -52,7 +61,7 @@ You can find all the helper functions and the state at
 src/context.js
 ```
 
-# React Hooks
+### React Hooks
 
 According to Sophie Alpert at React Conf 2008:
 
@@ -79,6 +88,6 @@ e.g:
 let {generateSlug} = useContext(BeerContext);
 ```
 
-# React Router
+### React Router
 
 This app uses React Router as a dependence for navigation. By using React Router we can create client-side routing for a single-page web application without the page refreshing as the user navigates on.
