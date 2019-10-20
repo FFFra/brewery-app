@@ -23,7 +23,7 @@ const Home = () => {
         <>
             <Title title='Beers available' />
             <section>
-                <button onClick={() => showFormHandler()}>
+                <button className={'button'} onClick={() => showFormHandler()}>
                     {form ? 'Close' : 'Add'}
                 </button>
                 <div>{form ? <BeerForm data={bottles} /> : ''}</div>
