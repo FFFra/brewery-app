@@ -1,4 +1,6 @@
 import React, {useState, useContext} from 'react';
+
+import './BeerForm.css';
 import {BeerContext} from '../../context';
 
 const BeerForm = () => {
@@ -25,35 +27,80 @@ const BeerForm = () => {
 
     return (
         <div>
-            <form action=''>
-                <h1>Add a beer</h1>
-                <div>
-                    <label htmlFor='name'>Name: </label>
-                    <input name='name' type='text' onChange={onChange} />
+            <h1 className={'form__title'}>Add a beer</h1>
+            <form className='form'>
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='name'>
+                        Name:
+                    </p>
+                    <input
+                        className={'form__input'}
+                        name='name'
+                        type='text'
+                        onChange={onChange}
+                    />
                 </div>
-                <div>
-                    <label htmlFor='style'>Style: </label>
-                    <input name='beerStyle' type='text' onChange={onChange} />
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='style'>
+                        Style:{' '}
+                    </p>
+                    <input
+                        className={'form__input'}
+                        name='beerStyle'
+                        type='text'
+                        onChange={onChange}
+                    />
                 </div>
-                <div>
-                    <label htmlFor='ibu'>IBU: </label>
-                    <input name='ibu' type='text' onChange={onChange} />
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='ibu'>
+                        IBU:{' '}
+                    </p>
+                    <input
+                        className={'form__input'}
+                        name='ibu'
+                        type='text'
+                        onChange={onChange}
+                    />
                 </div>
-                <div>
-                    <label htmlFor='abv'>ABV: </label>
-                    <input name='abv' type='text' onChange={onChange} />
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='abv'>
+                        ABV:{' '}
+                    </p>
+                    <input
+                        className={'form__input'}
+                        name='abv'
+                        type='text'
+                        onChange={onChange}
+                    />
                 </div>
 
-                <div>
-                    <label htmlFor='description'>Description: </label>
-                    <input name='description' type='text' onChange={onChange} />
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='description'>
+                        Description:{' '}
+                    </p>
+                    <input
+                        className={'form__input'}
+                        name='description'
+                        type='text'
+                        onChange={onChange}
+                    />
                 </div>
-                <select name='status' onChange={onChange}>
-                    <option value='verified'>Verified</option>
-                    <option value='unverified'>Unverified</option>
-                </select>
+                <div className={'form__container'}>
+                    <p className={'form__label'} htmlFor='status'>
+                        Status:{' '}
+                    </p>
+                    <select
+                        className={'form__input'}
+                        name='status'
+                        onChange={onChange}>
+                        <option value='verified'>Verified</option>
+                        <option value='unverified'>Unverified</option>
+                    </select>
+                </div>
             </form>
-            <button onClick={() => addData(bottles)}>Insert</button>
+            <button className={'button'} onClick={() => addData(bottles)}>
+                Insert
+            </button>
         </div>
     );
 };
