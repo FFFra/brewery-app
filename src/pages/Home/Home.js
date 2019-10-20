@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 
+import './Home.css';
 import {BeerContext} from '../../context';
 import Loading from '../../components/Loading/Loading';
 import BeerForm from '../../components/BeerForm/BeerForm';
@@ -19,14 +20,18 @@ const Home = () => {
     }
 
     return (
-        <section>
+        <>
             <Title title='Beers available' />
-            <button onClick={() => showFormHandler()}>
-                {form ? 'Close' : 'Add'}
-            </button>
-            <div>{form ? <BeerForm /> : ''}</div>
-            <div>{loading ? <Loading /> : bottles}</div>
-        </section>
+            <section>
+                <button onClick={() => showFormHandler()}>
+                    {form ? 'Close' : 'Add'}
+                </button>
+                <div>{form ? <BeerForm data={bottles} /> : ''}</div>
+            </section>
+            <section className='bottle__section'>
+                {loading ? <Loading /> : bottles}
+            </section>
+        </>
     );
 };
 
