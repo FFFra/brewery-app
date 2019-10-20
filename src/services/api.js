@@ -16,7 +16,10 @@ const loadBeers = async () => {
     }
 };
 
-// enable cross-domain requests when needed
+/*
+enable cross-domain requests when needed
+by https://github.com/Rob--W/cors-anywhere
+*/
 (function() {
     var cors_api_host = 'cors-anywhere.herokuapp.com';
     var cors_api_url = 'https://' + cors_api_host + '/';
