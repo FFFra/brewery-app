@@ -2,11 +2,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Brewery App
 
-This app render the beer cellar of a certain brewery. In this particular case I've picked the Guinness beers.
+This app renders the beer cellar of a certain brewery. In this particular case, I've picked the famous Guinness Brewery.
 
-This app does not have an API, so it makes usage of fake data. In order to achieve that, I took advantage of the [BreweryDB][https://brewerydb.com] sandbox. The main reason for that is the great amount of data provided by the API, so we don't have to generate our own.
+This app does not have an API, so it makes usage of fake data. To achieve that, I took advantage of the [BreweryDB](https://brewerydb.com) sandbox. The main reason for that is the great amount of data provided by the API, so we don't have to generate our own.
 
-You can another pick another brewery to be rendered by changing the ID in the API request at:
+You can pick another brewery to be rendered by changing the ID in the API request at:
 
 ```
 src/services/api.js
@@ -18,7 +18,7 @@ at the line:
 const breweryID = INSERT_BREWERY_ID;
 ```
 
-## Available Scripts
+## Usage
 
 Clone or download this repo. Then navigate to the folder:
 
@@ -40,8 +40,45 @@ You will also see any lint errors in the console.
 
 ---
 
-#Considerations
+## Considerations
 
-#React tools (context and hooks)
+# Context API
 
-#
+The Context API provides a very straight forward way to pass data through the component tree without having to pass props down manually at every level.
+
+You can find all the helper functions and the state at
+
+```
+src/context.js
+```
+
+# React Hooks
+
+According to Sophie Alpert at React Conf 2008:
+
+> Sophie Alpert said at React Conf 2018 Class are very confusing and annoying to understand for both > Human and Machine
+
+React Hooks allow us to use state and React lifecycle features without using `class`
+
+If you want to create a new component that uses Context, first `Import` the context:
+
+```
+import {BeerContext} from '../../context';
+```
+
+Then import the `useContext` hook
+
+```
+import React, {useContext} from 'react';
+```
+
+then you can destructure and use the available data and functions:
+e.g:
+
+```
+let {generateSlug} = useContext(BeerContext);
+```
+
+# React Router
+
+This app uses React Router as a dependence for navigation. By using React Router we can create client-side routing for a single-page web application without the page refreshing as the user navigates on.
