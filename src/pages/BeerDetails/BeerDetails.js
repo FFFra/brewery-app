@@ -28,12 +28,16 @@ export default class BeerDetails extends Component {
         const {name, description, status, beerStyle, ibu, abv} = bottle;
         return (
             <div className='details__container'>
-                <h1>{name}</h1>
-                <p>{beerStyle}</p>
-                <h3>{status}</h3>
+                <h1 className={'details__title'}>{name}</h1>
+                <h3>{beerStyle}</h3>
+                <h4>{status}</h4>
                 <p>{description}</p>
-                <span>ibu: {ibu}</span>
-                <span>abv: {abv}</span>
+                <p>
+                    <strong>ibu:</strong> {ibu}
+                </p>
+                <p>
+                    <strong>abv:</strong> {abv}
+                </p>
             </div>
         );
     }
