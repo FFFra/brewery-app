@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import {BeerContext} from '../../context';
-
+import './BeerDetails.css';
 export default class BeerDetails extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +27,7 @@ export default class BeerDetails extends Component {
         }
         const {name, description, status, beerStyle, ibu, abv} = bottle;
         return (
-            <div>
+            <div className='details__container'>
                 <h1>{name}</h1>
                 <p>{beerStyle}</p>
                 <h3>{status}</h3>
