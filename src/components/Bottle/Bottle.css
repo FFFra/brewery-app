@@ -1,5 +1,5 @@
 .bottle__card {
-    /* flex: 0 1 calc(25% - 1em); */
+    flex: 0 1 calc(25% - 1em);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,4 +20,11 @@
 }
 .bottle__title {
     color: #f1c761;
+}
+
+@media only screen and (max-width: 600px) {
+    .bottle__card {
+        flex-basis: unset;
+        width: 100%;
+    }
 }
