@@ -44,11 +44,9 @@ You will also see any lint errors in the console.
 ## Wireframes
 
 ### Desktop
-![](wireframes/desktop/desktop-1.png) ![](wireframes/desktop/desktop-2.png)![](wireframes/desktop/desktop-3.png)
-
+<img src="wireframes/desktop/desktop-1.png" width="250"><img src="wireframes/desktop/desktop-2.png" width="250"><img src="wireframes/desktop/desktop-3.png" width="250">  
 ### Mobile
-![](wireframes/mobile/mobile-1.png) ![](wireframes/mobile/mobile-2.png)![](wireframes/mobile/mobile-3.png)
-
+<img src="wireframes/mobile/mobile-1.png" width="250"> <img src="wireframes/mobile/mobile-2.png" width="250"><img src="wireframes/mobile/mobile-3.png" width="250">
 
 
 ## Overview
