@@ -1,3 +1,8 @@
+![issues](https://img.shields.io/github/issues/FFFra/brewery-app)
+![forks](https://img.shields.io/github/forks/FFFra/brewery-app)
+[![license](https://img.shields.io/github/license/FFFra/brewery-app)
+![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Brewery App
